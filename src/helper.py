@@ -5,12 +5,11 @@ from langchain_groq import ChatGroq  # ← Changed
 from langchain_core.prompts import PromptTemplate
 from langchain_classic.chains.summarize import load_summarize_chain
 from langchain_huggingface import HuggingFaceEmbeddings  # ← Changed
-from langchain_community.vectorstores import FAISS  # ← Changed
 from langchain_classic.chains import RetrievalQA  # ← Changed
 import os
 from dotenv import load_dotenv
 from src.prompt import prompt_template, refine_template
-
+from langchain_pinecone import PineconeVectorStore
 # Groq authentication
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
@@ -79,7 +78,10 @@ def llm_pipeline(file_path):
         model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
     
-    vector_store = FAISS.from_documents(document_answer_gen, embeddings)
+    vector_store = PineconeVectorStore(
+        index_name="interview-qa-bot",
+        embedding=embeddings
+    )
     
     llm_answer_gen = ChatGroq(
         temperature=0.1, 

@@ -15,7 +15,7 @@ os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 # Process your PDF file
-pdf_path = "static/docs/your_file.pdf"  # Replace with your PDF path
+pdf_path = "static/docs/SDG_removed_removed.pdf"  # Replace with your PDF path
 document_ques_gen, document_answer_gen = file_processing(pdf_path)
 
 # Initialize embeddings (same as in helper.py)
