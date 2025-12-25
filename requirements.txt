@@ -14,4 +14,8 @@ faiss-cpu
 python-dotenv
 langchain-groq
 langchain-huggingface
+pinecone-client
+langchain-pinecone
+sentence-transformers
+
 -e .
