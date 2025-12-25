@@ -1,5 +1,5 @@
 name: Deploy Application Docker Image to EC2 instance
-#lets do it after adding secrets
+#lets do it after adding secrets - lets do it
 on:
   push:
     branches: [main]
