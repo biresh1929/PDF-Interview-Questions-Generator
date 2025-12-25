@@ -6,5 +6,5 @@ setup(
     author="Biresh Kumar Singh",
     author_email="bireshkumar1964@gmail.com",
     packages=find_packages(),
-    install_requires=[ "langchain-groq","langchain-huggingface"]
+    install_requires=[ "langchain-groq","langchain-huggingface","pinecone-client","langchain-pinecone","sentence-transformers"]
 )
