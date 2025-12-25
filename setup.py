@@ -6,5 +6,5 @@ setup(
     author="Biresh Kumar Singh",
     author_email="bireshkumar1964@gmail.com",
     packages=find_packages(),
-    install_requires=[ "langchain-groq",]
+    install_requires=[ "langchain-groq","langchain-huggingface"]
 )

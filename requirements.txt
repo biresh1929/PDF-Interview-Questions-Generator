@@ -13,4 +13,5 @@ PyPDF2
 faiss-cpu
 python-dotenv
 langchain-groq
+langchain-huggingface
 -e .
